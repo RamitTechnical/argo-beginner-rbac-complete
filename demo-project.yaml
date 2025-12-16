@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: demo-project
+  namespace: argocd
+spec:
+  description: Beginner secure project
+
+  sourceRepos:
+    - https://github.com/example/demo-repo.git
+
+  destinations:
+    - namespace: demo-app
+      server: https://kubernetes.default.svc
+
+  namespaceResourceWhitelist:
+    - group: apps
+      kind: Deployment
+    - group: ""
+      kind: Service
+    - group: ""
+      kind: ConfigMap
+
+  clusterResourceWhitelist: []
