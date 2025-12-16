@@ -7,7 +7,7 @@ spec:
   description: Beginner secure project
 
   sourceRepos:
-    - https://github.com/example/demo-repo.git
+    - https://github.com/RamitTechnical/demo-repo.git
 
   destinations:
     - namespace: demo-app
