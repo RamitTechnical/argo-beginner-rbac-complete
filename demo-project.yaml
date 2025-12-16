@@ -20,5 +20,7 @@ spec:
       kind: Service
     - group: ""
       kind: ConfigMap
+    - group: apps
+      kind: ReplicaSet 
 
   clusterResourceWhitelist: []
